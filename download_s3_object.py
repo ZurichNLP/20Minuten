@@ -28,7 +28,7 @@ def parse_args():
         "-o",
         "--output-file",
         type=str,
-        help="Output file for the donwloaded object.",
+        help="Output file for the downloaded object.",
         metavar="PATH",
         required=True,
     )
@@ -37,25 +37,26 @@ def parse_args():
         type=str,
         help="Access key (AWS credentials).",
         metavar="STRING",
-        required=True,
     )
     parser.add_argument(
         "--secret-key",
         type=str,
         help="Secret key (AWS credentials).",
         metavar="STRING",
-        required=True,
     )
     args = parser.parse_args()
     return args
 
 
 def main(args: argparse.Namespace):
+    credentials = {
+        **({"aws_access_key_id": args.access_key_id} if args.access_key_id else {}),
+        **({"aws_secret_access_key": args.secret_key} if args.secret_key else {}),
+    }
     s3 = boto3.resource(
         "s3",
-        aws_access_key_id=args.access_key_id,
-        aws_secret_access_key=args.secret_key,
-        config=Config(signature_version='s3v4'),
+        config=Config(signature_version="s3v4"),
+        **credentials,
     )
 
     s3.Bucket(args.bucket_name).download_file(args.object_key, args.output_file)
