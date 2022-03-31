@@ -5,8 +5,8 @@ This repository contains scripts and instructions for downloading the 20 Minuten
 ## AWS Bucket and Credentials
 
 - Bucket name: `20min-simplified-language-uzh`
-- Access key id: `XXXXXXXXXXXXXXXXXX`
-- Secret access key: `YYYYYYYYYYYYYYYYY`
+- Access key id: `AKIA2I5XTVWVKRZDTZ4J`
+- Secret access key: `TEkUXE11y7evphjde7bJ/vxDPQJlodZ7KwAnDfg+`
 
 To configure your credentials, follow the [quickstart guide for Boto 3](https://boto3.amazonaws.com/v1/documentation/api/1.9.42/guide/quickstart.html).
 
@@ -16,6 +16,7 @@ The scripts use [Boto 3](https://boto3.amazonaws.com/v1/documentation/api/1.9.42
 
 ```bash
 git clone https://github.com/ZurichNLP/20Minuten
+cd 20Minuten
 
 pip3 install -r requirements.txt
 ```
