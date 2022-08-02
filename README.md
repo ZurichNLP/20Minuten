@@ -14,3 +14,4 @@ To download and extract the data, use the provided shell script:
 bash data/2021_EMNLP_newsum/download_2021_EMNLP_newsum.sh
 ```
 
+You can also download the data directly from [here](https://20min-simplified-language-uzh.s3.eu-central-1.amazonaws.com/EMNLP_newsum_2021_A_New_Dataset_TS_DE.zip).
