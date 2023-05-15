@@ -1,0 +1,7 @@
+{
+    "path_to_splits": "resources/data/20_min_0_00_001/",
+    "train_split": "20min_all_train",
+    "valid_split": "20min_all_filt_by_title_dev",
+    "test_split": "20min_all_filt_by_title_test"
+}
+
