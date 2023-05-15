@@ -1,17 +1,11 @@
-# 20Minuten
+# 20 Minuten
 
-This repository contains scripts and instructions for downloading the 20 Minuten ("20 Minutes") dataset.
+Welcome to the 20 Minuten dataset repository!
 
-## Data Sets
+This repository contains the code and datasets presented in [Rios et al., 2021](https://aclanthology.org/2021.newsum-1.16/) and [kew et al., 2023]().
 
-### EMNLP newsum 2021
+If you're looking for the dataset presented in [Rios et al., 2021](https://aclanthology.org/2021.newsum-1.16/), which is used for experiments on German Text Simplification, go [here](./EMNLP_newsum_2021/).
 
-This section describes downloading the dataset described in the paper ["A New Dataset and Efficient Baselines for Document-level Text Simplification in German"](https://aclanthology.org/2021.newsum-1.16/), presented at the *Third Workshop on New Frontiers in Summarization* at EMNLP 2021.
+If you're looking for the dataset presented in [kew et al., 2023](), which is used for experiments in single- and multi-task German Text Summarisation, go [here](./SwissText_2023/).
 
-To download and extract the data, use the provided shell script:
-
-```bash
-bash data/2021_EMNLP_newsum/download_2021_EMNLP_newsum.sh
-```
-
-You can also download the data directly from [here](https://20min-simplified-language-uzh.s3.eu-central-1.amazonaws.com/EMNLP_newsum_2021_A_New_Dataset_TS_DE.zip).
+In each subdirectory, you'll find the appropriate README containing information on accessing the dataset and running experiments.
