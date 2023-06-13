@@ -12,17 +12,17 @@ pip install -r requirements.txt
 
 ## 20 Minuten Data
 
-To download the data, run
+To download and extract the data, use the provided shell script:
 
 ```bash
-
-#TODO
-
+bash download_2023_SwissText_TS.sh
 ```
+
+This will create a new folder `resources/data/` (if it doesn't already exist) containing the downloaded and unzipped data.
 
 For experimation, we provide a data handling script to load the dataset for a given set of tasks with Hugging Face datasets.
 
-For this to work, you must set the paths to the local dataset in `path_config.json`.
+For this to work, you must set the paths to the local dataset in `path_config.json`. By default, it is defined as `resources/data/SwissText_2023_TS_DE/20min_0_00_000_220512/`.
 
 ## Experiments
 
@@ -59,7 +59,7 @@ To reproduce these filtered splits, run:
 
 ```bash
 python scripts/data_cleaning.py \
-    -i resources/data/20_min_0_00_001 \
+    -i resources/data/SwissText_2023_TS_DE/20min_0_00_000_220512/ \
     -m resources/data/20min_articles_in_mc4.jsonl \
     -k title
 ```

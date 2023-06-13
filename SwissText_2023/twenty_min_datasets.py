@@ -47,9 +47,15 @@ _LICENSE = "ToDo"
 
 # TODO: Add link to the official dataset URLs here
 
-with open('path_config.json') as f:
+# use `path_config.json` for filtered experiments
+# with open('path_config.json') as f:
+#     path_config = json.load(f)
+
+# use `path_config_full_splits.json` for gathering statistics
+with open('path_config_full_splits.json') as f:
     path_config = json.load(f)
-    
+
+
 _URL = Path(path_config['path_to_splits'])
 _URLS = {
     "train": _URL / path_config['train_split'],

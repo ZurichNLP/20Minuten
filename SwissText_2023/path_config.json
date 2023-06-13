@@ -1,5 +1,5 @@
 {
-    "path_to_splits": "resources/data/20_min_0_00_001/",
+    "path_to_splits": "resources/data/SwissText_2023_TS_DE/20min_0_00_000_220512/",
     "train_split": "20min_all_train",
     "valid_split": "20min_all_filt_by_title_dev",
     "test_split": "20min_all_filt_by_title_test"
