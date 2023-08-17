@@ -26,3 +26,14 @@ for f in "$outdir"*.zip; do
     echo "unzipping $f ..."
     unzip -q "$f" -d "$outdir"
 done
+
+# also fetch the mc4 overlap data for filtering
+object_key="SwissText_2023_TS_DE_articles_in_mc4.zip"
+download_url="https://${bucket_name}.s3.eu-central-1.amazonaws.com/${object_key}"
+outfile="$data_dir/$object_key"
+
+wget -O "$outfile" "$download_url"
+
+unzip -q "$outfile" -d "$outdir"
+
+echo "Done."
